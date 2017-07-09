@@ -1,0 +1,46 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Ejercicio 8</title>
+</head>
+
+<body>
+<script type="text/javascript" language="javascript">
+
+var usuarios = ["Antonio", "Juan", "Jorge", "Javier"];
+var contras = ["1234", "4321", "5678", "8765"];
+var usuario = prompt("Nombre de usuario:");
+var contra = prompt("Cuál es su contraseña?");
+var valor1 = "";
+var valor2 = "";
+
+function compUsuario(){
+	for(var x = 0 ; x < usuarios.length; x++){
+		if(usuarios[x] == usuario){
+			return x;
+		}		
+	}
+	return false;
+}
+
+function compContras(){
+	for(var x = 0 ; x < contras.length; x++){
+		if(contras[x] == contra){
+			return x;
+		}		
+	}
+	return false;
+}
+valor1 = compUsuario();
+valor2 = compContras();
+
+	if(valor1 == valor2 && valor2 !== false){
+		alert("Bienvenid@ " + usuario);	
+	}else{
+		alert("No estas registrado " + usuario);	
+	}
+
+</script>
+</body>
+</html>
