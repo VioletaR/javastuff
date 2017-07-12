@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="windows-1252">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+    <script language="javascript">
+
+        var importeTexto = prompt ("¿Cuál es el importe de su compra?"); 
+        var dineroTexto = prompt ("¿Con cuánto dinero paga?");
+        var importe = parseInt(importeTexto);
+        var dinero = parseInt(dineroTexto);
+        var diferencia = dinero - importe; 
+        var bill50 = 0;
+        var bill20 = 0;
+        var bill10 = 0;
+        var bill5 = 0;
+        var resto = 0;
+                  
+    while(diferencia > 0) {
+            if(diferencia >= 50) {
+                diferencia -= 50;
+                bill50++;
+            } else if (diferencia >= 20){
+                diferencia -= 20; 
+                bill20++;
+            } else if (diferencia >=10){
+                diferencia -= 10;
+                bill10++;
+            } else if (diferencia >=5){
+            diferencia -= 5;
+            bill5++;
+        } else {
+        resto = diferencia;
+        diferencia = 0; 
+        }
+    }    
+    
+    alert ("Tienes que devolver " +bill50 + " de 50€ "+ bill20 + " de 20€ "+ bill10 +" de 10€ "+bill5 +" de 5€ y sobran " +resto+" €");
+    
+    </script>
+    </head>
+    <body>
+        <div>TODO write content</div>
+    </body>
+</html>

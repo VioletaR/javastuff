@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="windows-1252">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <script language="javascript">
+            
+            var usuarios = ["Antonio", "Juan", "Jorge", "Javier"];
+            var contras = [1234, 4321, 5678, 8795];
+            var usuario = prompt ("Nombre de usuario:");
+            var contra = prompt ("Cuál es su contraseña?");
+            var valor1 = "";
+            var valor2 = "";
+            
+            function CompUsuario (){
+                for (var x = 0; x < usuarios.lenght ; x++){
+                    if (usuarios[x] == usuario) {
+                        return x;
+                    }
+                }
+                return false;
+            }
+            
+            function CompContras (){
+                for (var x = 0; x < contras.lenght; x++){
+                    if (contras[x] == contra){
+                        return x; 
+                    }    
+                } 
+                return false;
+            }    
+                
+    valor1 = CompUsuario();
+    valor2 = CompContras();
+    
+    if (valor1==valor2 && valor2!==false){
+            alert("Bienvenid@ " + usuario);
+        } else {
+            alert("Datos de ingreso incorrectos"); 
+        }    
+            
+            
+            
+            
+            
+            
+        </script>    
+        
+        
+    </head>
+    <body>
+        <div>TODO write content</div>
+    </body>
+</html>
