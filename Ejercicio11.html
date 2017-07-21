@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="windows-1252">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         
+        <style language="css"> 
+        
+            .comas {
+                fontcolor: green;                
+            }           
+       
+        </style>
+        <script language="javascript">
+            
+            
+            /*
+            En un lugar de la Mancha, de cuyo nombre no quiero acordarme, no ha mucho tiempo que vivía un hildago de los de lanza en astillero, adarga antigua, rocín flaco y galgo corredor.
+            
+            
+            marcar las comas verdes  
+            El texto tiene x letras x
+            La variable contiene x letras a x 
+            La palabra hidalgo esta en la posición x x 
+            en minus x
+            en mayus x
+            enlace en seeway x 
+            
+            1. declarar la cadena entera
+            2. seccionarla con slice() entre las comas
+            3. agregar la variabe coma con verde y sumarla
+    
+            */
+           
+           
+            
+        var enlace = "Seeway";
+        var coma = ", "; 
+        var texto = "En un lugar de la Mancha, de cuyo nombre no quiero acordarme, no ha mucho tiempo que vivía un hidalgo de los de lanza en astillero, adarga antigua, rocín flaco y galgo corredor.";
+        var contador = 0;
+        var buscar = 0;
+        var posicion;
+        var parrafos;
+    
+        for(var x = 0 ; x < texto.length; x++){
+	if(texto.charAt(x) == "a"){
+		contador++;
+	}
+        }
+        
+            var parrafos = texto.split(",");
+                for(var x = 0 ; x < parrafos.length; x++){
+                    document.write ("<p style='color:green;'>" + parrafos[x] + "</p>");                    
+                    
+                }
+        
+            
+            document.write ("El texto tiene: " + (texto.length += 1) + " letras <br>");
+            
+            document.write ("<br> El texto tiene: " + (contador += 1) + " letras \"a\" <br>");
+            
+            do { 
+            posicion = texto.indexOf("hidalgo", buscar);
+            if (posicion != -1) 
+            {
+                document.write ("<br> La palabra hidalgo esta en la posición " + posicion + "<br>");
+                buscar = posicion +1;
+            }    
+        } while  (posicion != -1);
+            
+                      
+            document.write ("<br>" + texto.toUpperCase() + "<br>");
+            
+            document.write ("<br>" +  texto.toLowerCase() + "<br>");
+    
+            document.write ("<br>" + enlace.link("http://www.seeway.net") +"<br>"); 
+    
+            document.write("<p style='color:red;'>" + "Este es el texto rojo" + "</p>");
+            
+        </script>    
+       
+    </head>
+    <body>
+        
+    </body>
+</html>
