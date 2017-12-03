@@ -1,0 +1,11 @@
+var x = 1;    // tell the loop where to start
+
+while (x <= 20) {   // tell the loop where to stop
+  (x % 3 === 0 && x % 5 === 0) ? console.log("JuliaJames");  // check if it's divisible then print James, Julia or JuliaJames
+  (x % 3 === 0 && x % 5 !== 0) ? console.log("Julia");
+  (x % 3 !== 0 && x% 5 === 0) ? console.log("James"); 
+  console.log(x);
+  
+  x++;    // don't forget to increment x! 
+   
+}
